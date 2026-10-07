@@ -73,12 +73,15 @@ def pick_visualization(average):
     """
     letter = input("Pick 'a' for mean, 'b' for median, 'c' for mode: ", )
     if letter == "a":
+        print("picked: Mean")
         avg = statistics.mean(grades)
         print(avg)
     elif letter == "b":
+        print("picked: Median")
         avg = statistics.median(grades)
         print(avg)
     elif letter == "c":
+        print("picked: Mode")
         avg = statistics.mode(grades)
         print(avg)
     else:
