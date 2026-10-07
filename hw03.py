@@ -1,5 +1,5 @@
 """
-Name: (put your name here)
+Name: Aline Valenzuela-Lucero
 Peers: (add any collaborators)
 References: (anything you checked to solve this)
 """
