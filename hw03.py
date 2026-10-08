@@ -29,20 +29,21 @@ def read_five_ints():
         # check if the int is not in the interval [0 to 10] print error
         # add the int to grades at index idx
 
-        alist = list(range(11))
-        in_str = input("Give me the next grade in [0 to 10]:", )
-        if in_str.isdigit():
+        alist = list(range(11)) #list giving the possible values within the range
+        in_str = input("Give me the next grade in [0 to 10]:", ) #user input
+        if in_str.isdigit(): #conditional in which will reject non digit values or outside the range
             in_str = int(in_str)
             if in_str not in alist:
                 print("Error in read_five_ints: input integer outside of range.")
                 exit()
             else:
-                grades[idx] = in_str
+                grades[idx] = in_str #stores the values
         else:
             print("Error in read_five_ints: input string is not for an integer")
             exit()
 
-        
+        '''This functions purpose is for the user to input a grade (digit) with a value of 1-10. Anything outside of
+            the values or if its not a digit will not be accepted per the code. Then, it will be stored into the matrix.'''
 
     #Anything with this indentation is NO LONGER inside the loop
 
@@ -58,22 +59,25 @@ def pick_averaging_method():
     Any other input prints
     'Error in pick_averaging_method: incorrect option picked'.
     """
-    letter = str(input("Pick 'a' for mean, 'b' for median, 'c' for mode: "))
-    if letter == "a":
+    letter = str(input("Pick 'a' for mean, 'b' for median, 'c' for mode: ")) #user picks letter corresponding to average they want.
+    if letter == "a": #this method will give the mean and return the mean
         print("picked: Mean")
         avg = statistics.mean(grades)
         return avg
-    elif letter == "b":
+    elif letter == "b": #this method will give the median and return the median
         print("picked: Median")
         avg = statistics.median(grades)
         return avg
-    elif letter == "c":
+    elif letter == "c": #this method will give the mode and return the mode
         print("picked: Mode")
         avg = statistics.mode(grades)
         return avg
-    else:
+    else: #any other input letter will be rejected.
         print("Error in pick_averaging_method: incorrect option picked")
         exit()
+    '''This function allows the user to pick an everaging method by inserting a certain letter
+        that is later bounded by a conditional statement. Anything other the set letters will be
+        rejected. The function then returns the averaging method picked and the value.'''
 
 # Task 3:
 #  Complete the function "pick_visualization" below:
@@ -86,14 +90,17 @@ def pick_visualization(average):
     Any other input prints
     'Error in pick_visualization: incorrect option picked'.
     """
-    viz = str(input("Pick '1' for print average, or '2' for plot average: "))
-    if viz == '1':
+    viz = str(input("Pick '1' for print average, or '2' for plot average: ")) #user input stored into variable
+    if viz == '1': #conditional if 1 is picked, the list and average are given
         print_list_and_average(average)
-    elif viz == '2':
+    elif viz == '2': #conditional if 2 is picked, plot is given
         plot_grades(average)
-    else:
+    else: #anything else will be an error.
         print("Error in pick_visualization: incorrect option picked")
         exit()
+    '''This last function has the user pick a type of visualization, the list and the average from the
+        method selected or the plot with the method result. it uses a string input of a digit, to which
+        a conditional gives the printed listed if 1 and plot if 2. Any other input will be rejected.'''
 
 
 # ---------------------------------------
