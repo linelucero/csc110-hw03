@@ -58,19 +58,6 @@ def pick_averaging_method():
     Any other input prints
     'Error in pick_averaging_method: incorrect option picked'.
     """
-    pass
-
-# Task 3:
-#  Complete the function "pick_visualization" below:
-def pick_visualization(average):
-    """ prints the result in a format that depends on the user's selection
-
-    Prints the numeric average or prints in a special way
-    depending on user input.
-    User should pick '1' for print average, or '2' for plot average.
-    Any other input prints
-    'Error in pick_visualization: incorrect option picked'.
-    """
     letter = input("Pick 'a' for mean, 'b' for median, 'c' for mode: ", )
     if letter == "a":
         print("picked: Mean")
@@ -87,6 +74,19 @@ def pick_visualization(average):
     else:
         print("Error in pick_averaging_meathod: incorrect option picked")
         exit()
+
+# Task 3:
+#  Complete the function "pick_visualization" below:
+def pick_visualization(average):
+    """ prints the result in a format that depends on the user's selection
+
+    Prints the numeric average or prints in a special way
+    depending on user input.
+    User should pick '1' for print average, or '2' for plot average.
+    Any other input prints
+    'Error in pick_visualization: incorrect option picked'.
+    """
+    pass
 
 
 # ---------------------------------------
